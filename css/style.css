@@ -199,16 +199,16 @@ body {
   border-radius: 4px;
 }
 .antena::before {
-  background-image: url(../images/SVG/Group-1.svg);
+  background-image: url(../images/Group-1.jpg);
 }
 .time::before {
-  background-image: url(../images/SVG/Group-2.svg);
+  background-image: url(../images/Group-2.jpg);
 }
 .comp::before {
-  background-image: url(../images/SVG/Group-3.svg);
+  background-image: url(../images/Group-3.jpg);
 }
 .spase::before {
-  background-image: url(../images/SVG/Group-4.svg);
+  background-image: url(../images/Group-4.jpg);
 }
 .specifical .titel-ind {
   margin: 0 0 10px 0;
