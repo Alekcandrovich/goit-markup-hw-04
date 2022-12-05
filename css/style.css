@@ -10,8 +10,10 @@
   --color-slogan: #ffffff;
   --color-button: #f5f4fa;
   --color-button-activ: #188ce8;
+  --color-button-footer: rgba(255, 255, 255, 0.1);
   --color-border-index: #f5f4fa;
   --color-border-portfolio: #eeeeee;
+  --color-border-klient: #AFB1B8;
   --color-address-finish: rgba(255, 255, 255, 0.6);
   --color-shadow-ind: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --color-shadow-port: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -43,6 +45,7 @@ body {
   color: var(--color-logo);
 }
 .logo .down {
+  margin-right: -93px;
   color: var(--color-slogan);
 }
 /* flex */
@@ -59,6 +62,26 @@ body {
 }
 .nav .item + .item {
   margin-left: 50px;
+}
+.envelope {
+  width: 16px;
+  height: 12px;
+  margin: 0 10px 0 0;
+  fill: var(--color-last);
+}
+.envelope:hover,
+.envelope:focus {
+  fill: var(--color-link);
+}
+.smartphone {
+  width: 10px;
+  height: 16px;
+  margin: 0 10px 0 0;
+  fill: var(--color-last);
+}
+.smartphone:hover,
+.smartphone:focus {
+  fill: var(--color-link);
 }
 .nav .link {
   padding: 32px 0;
@@ -191,26 +214,14 @@ body {
   flex-basis: calc(100% / 4-30px);
   margin-left: 30px;
 }
-.line::before {
-  display: block;
-  margin-bottom: 30px;
-  content: '';
+.line-icon {
+  width: 270px;
   height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--background-comand);
   border-radius: 4px;
-  outline: 2px solid red;
 }
-.antena::before {
-  
-}
-.time::before {
-  background-image: url(../images/Group-2.jpg);
-}
-.comp::before {
-  background-image: url(../images/Group-3.jpg);
-}
-.spase::before {
-  background-image: url(../images/Group-4.jpg);
-}
+
 .specifical .titel-ind {
   margin: 0 0 10px 0;
   padding: 0;
@@ -269,7 +280,7 @@ body {
   flex-basis: calc(100% / 4-30px);
   margin-left: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+              0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 .comand .fotoline {
@@ -287,7 +298,7 @@ body {
   color: var(--color-general);
 }
 .comand .proff {
-  margin: 0 0 30px 0;
+  margin: 0 0 16px 0;
   padding: 0;
 
   font-size: 16px;
@@ -298,14 +309,49 @@ body {
   color: var(--color-last);
 }
 
+.social-card {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+.buttom-card {
+  border-radius: 50%;
+  border: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin: 0;
+  
+  background-color: var(--background-general);
+}
+.icon-card {
+  width: 20px;
+  height: 20px;
+  margin: 4px 0 0 0;
+  fill: var(--color-border-klient);
+}
+.buttom-card:hover,
+.buttom-card:focus {
+  background-color: var(--color-link);
+}
+.icon-card:hover,
+.icon-card:focus {
+  fill: var(--color-slogan)
+}
+
+
+
+
 /* klient */
 .klient {
   display: flex;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style: none;
-  outline: 1px solid red;
-}
+ }
 .klient-line {
   padding: 0;
   border: none;
@@ -313,12 +359,18 @@ body {
 .klient-icon {
   width: 170px;
   height: 92px;
+  border: 1px solid var(--color-border-klient);
+  border-radius: 4px;
+  fill: var(--color-border-klient);
+}
+.klient-icon:hover,
+.klient-line:focus {
+  fill: var(--color-link);
+  border: 1px solid var(--color-link);
 }
 
 /* finish */
 .footer {
-  display: flex;
-  align-items: center;
   padding: 64px 0;
 
   background-color: var(--background-slogan);
@@ -350,6 +402,52 @@ body {
 .address .link:focus {
   color: var(--color-link);
 }
+.social {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.clear {
+  margin: 0;
+  padding: 0;
+}
+.compound {
+  margin: 12px 0 20px 70px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--background-general);
+}
+.social-footer {
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+  margin: 0 0 0 70px;
+  padding: 0;
+}
+.buttom-social {
+  border-radius: 50%;
+  border: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  
+  background-color: var(--color-button-footer);
+}
+.icon-footer {
+  width: 20px;
+  height: 20px;
+  margin: 4px 0 0 0;
+  fill: var(--color-slogan);
+}
+.buttom-social:hover,
+.buttom-social:focus {
+  background-color: var(--color-link)
+}
+
 
 /* portfolio */
 .filter {
@@ -387,7 +485,11 @@ body {
 .content-element {
   border-bottom: 1px solid var(--color-border-portfolio);
 }
-
+.content-element:hover,
+.content-element:focus {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+              0px 2px 1px rgba(0, 0, 0, 0.2);
+}
 
 .content .titel-port {
   margin: 20px 0 0 0;
