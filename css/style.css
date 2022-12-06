@@ -5,6 +5,7 @@
   --background-comand: #f5f4fa;
   --color-logo: #000000;
   --color-general: #212121;
+  --color-border-header: #ECECEC;
   --color-last: #757575;
   --color-link: #2196f3;
   --color-slogan: #ffffff;
@@ -27,6 +28,9 @@ body {
 
   background-color: var(--background-general);
   color: var(--color-general);
+}
+.header {
+  border-bottom: 1px solid var(--color-border-header)
 }
 
 /* logotip */
@@ -51,7 +55,6 @@ body {
 /* flex */
 .nav {
   display: flex;
-  border-bottom: 1px solid var(--color-border);
   align-items: center;
 }
 /* menu nav */
@@ -492,7 +495,7 @@ body {
 }
 
 .content .titel-port {
-  margin: 20px 0 0 0;
+  margin: 20px 24px 0 24px;
 
   font-size: 18px;
   line-height: 2;
@@ -501,7 +504,7 @@ body {
   color: var(--color-general);
 }
 .content .text-port {
-  margin: 4px 0 0 0;
+  margin: 4px 24px 0 24px;
 
   font-size: 16px;
   line-height: 1.88;
