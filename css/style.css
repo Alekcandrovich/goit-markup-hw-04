@@ -70,21 +70,13 @@ body {
   width: 16px;
   height: 12px;
   margin: 0 10px 0 0;
-  fill: var(--color-last);
-}
-.envelope:hover,
-.envelope:focus {
-  fill: var(--color-link);
+  fill: currentColor;
 }
 .smartphone {
   width: 10px;
   height: 16px;
   margin: 0 10px 0 0;
-  fill: var(--color-last);
-}
-.smartphone:hover,
-.smartphone:focus {
-  fill: var(--color-link);
+  fill: currentColor;
 }
 .nav .link {
   padding: 32px 0;
@@ -335,17 +327,17 @@ body {
   margin: 4px 0 0 0;
   fill: var(--color-border-klient);
 }
+.icon-card .aktiv {
+  fill: var(--color-slogan);
+}
 .buttom-card:hover,
 .buttom-card:focus {
   background-color: var(--color-link);
 }
 .icon-card:hover,
 .icon-card:focus {
-  fill: var(--color-slogan)
+  fill: var(--color-slogan);
 }
-
-
-
 
 /* klient */
 .klient {
@@ -451,7 +443,6 @@ body {
   background-color: var(--color-link)
 }
 
-
 /* portfolio */
 .filter {
   display: flex;
@@ -461,6 +452,7 @@ body {
 .filter .item + .item {
   margin-left: 8px;
 }
+
 /* .content {
   display: flex;
   flex-wrap: wrap;
