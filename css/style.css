@@ -11,14 +11,16 @@
   --color-slogan: #ffffff;
   --color-button: #f5f4fa;
   --color-button-activ: #188ce8;
-  --color-button-footer: rgba(255, 255, 255, 0.1);
+  --color-icon-footer: rgba(255, 255, 255, 0.1);
   --color-border-index: #f5f4fa;
   --color-border-portfolio: #eeeeee;
   --color-border-klient: #AFB1B8;
   --color-address-finish: rgba(255, 255, 255, 0.6);
   --color-shadow-ind: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --color-comand-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+                         0px 2px 1px rgba(0, 0, 0, 0.2);
   --color-shadow-port: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+                       0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 body {
@@ -99,6 +101,11 @@ body {
 .contact {
   display: flex;
   margin-left: auto;
+  align-items: center;
+}
+.contact-icon {
+  display: flex;
+  align-items: center;
 }
 
 /* section + container */
@@ -275,8 +282,7 @@ body {
 .comand .foto {
   flex-basis: calc(100% / 4-30px);
   margin-left: 30px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-              0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--color-comand-shadow);
   border-radius: 0px 0px 4px 4px;
 }
 .comand .fotoline {
@@ -311,29 +317,30 @@ body {
   margin: 0 0 30px 0;
   padding: 0;
 }
-.buttom-card {
+.a-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   border-radius: 50%;
   border: none;
   width: 44px;
   height: 44px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   
-  background-color: var(--background-general);
+  color: var(--color-border-klient);
 }
 .icon-card {
   width: 20px;
   height: 20px;
-  margin: 4px 0 0 0;
-  fill: var(--color-border-klient);
+  fill: currentColor;
+  align-items: center;
 }
-.buttom-card:hover,
-.buttom-card:focus {
-  background-color: var(--color-link);
-}
-.icon-card:hover,
-.icon-card:focus {
-  fill: var(--color-slogan);
+.a-card:hover,
+.a-card:focus {
+  background-color: var(--color-button-activ);
+  color: var(--color-slogan);
 }
 
 /* klient */
@@ -420,25 +427,31 @@ body {
   margin: 0 0 0 70px;
   padding: 0;
 }
-.buttom-social {
+.a-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   border-radius: 50%;
   border: none;
   width: 44px;
   height: 44px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   
-  background-color: var(--color-button-footer);
+  color: var(--color-slogan);
+  background-color: var(--color-icon-footer);
 }
 .icon-footer {
   width: 20px;
   height: 20px;
-  margin: 4px 0 0 0;
-  fill: var(--color-slogan);
+  fill: currentColor;
+  align-items: center;
 }
-.buttom-social:hover,
-.buttom-social:focus {
-  background-color: var(--color-link)
+.a-footer:hover,
+.a-footer:focus {
+  background-color: var(--color-button-activ);
+  color: var(--color-slogan);
 }
 
 /* portfolio */
@@ -450,24 +463,6 @@ body {
 .filter .item + .item {
   margin-left: 8px;
 }
-
-/* .content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  margin-bottom: -50px;
-}
-.content-element {
-  margin-right: 30px;
-  margin-bottom: 50px;
-  border-bottom: 1px solid var(--color-border-portfolio);
-}
-.content-element:nth-child(3n + 3) {
-  margin: 0;
-} */
-
 .content {
   display: flex;
   flex-wrap: wrap;
@@ -483,10 +478,10 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
               0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-
+.card-port {
+  padding: 20px 24px;
+}
 .content .titel-port {
-  margin: 20px 24px 0 24px;
-
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -494,8 +489,6 @@ body {
   color: var(--color-general);
 }
 .content .text-port {
-  margin: 4px 24px 0 24px;
-
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
